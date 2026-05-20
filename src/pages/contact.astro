@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout title="联系方式">
+  <style>
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 8vh var(--spacing-page);
+    }
+
+    .page h1 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      margin-bottom: 3rem;
+      color: var(--color-text-light);
+    }
+
+    .info {
+      font-size: 0.95rem;
+      line-height: 2;
+    }
+
+    .info a {
+      border-bottom: 1px solid var(--color-border);
+      transition: border-color 0.2s;
+    }
+
+    .info a:hover {
+      border-color: var(--color-text);
+    }
+  </style>
+
+  <div class="page">
+    <h1>联系方式</h1>
+    <div class="info">
+      <p>邮箱：<a href="mailto:{site.contact.email}">{site.contact.email}</a></p>
+    </div>
+  </div>
+</BaseLayout>
