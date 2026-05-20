@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { site } from "../data/site";
+
+const mailtoHref = `mailto:${site.contact.email}`;
 ---
 
 <BaseLayout title="联系方式">
@@ -37,7 +39,7 @@ import { site } from "../data/site";
   <div class="page">
     <h1>联系方式</h1>
     <div class="info">
-      <p>邮箱：<a href="mailto:{site.contact.email}">{site.contact.email}</a></p>
+      <p>邮箱：<a href={mailtoHref}>{site.contact.email}</a></p>
     </div>
   </div>
 </BaseLayout>
