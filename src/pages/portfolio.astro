@@ -1,29 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-interface Work {
-  title: string;
-  subtitle: string;
-  cover: string;
-  description: string;
-}
-
-const works: Work[] = [
-  {
-    title: "何枝可依",
-    subtitle: "实验影像 / 诗纪录片",
-    cover: "/images/works/he-zhi-ke-yi-cover.jpg",
-    description:
-      "以个人频繁搬家的成长经历为起点，通过诗意的独白、真实的母女对话以及纸船、迷宫等视觉隐喻，探讨在高速流动的当下，个体对「家」的迷失与对安全感的追问。",
-  },
-  {
-    title: "Web and Wyrd",
-    subtitle: "影集",
-    cover: "/images/works/web-and-wyrd-cover.jpg",
-    description:
-      "通过三个核心神话故事——蜘蛛祖母编织世界、郊狼柯帝编织星辰、女武神编织命运——呈现人类如何用「编织」的意象理解世界。",
-  },
-];
+import { worksByCategory } from "../data/works";
 ---
 
 <BaseLayout title="作品集">
@@ -42,11 +19,22 @@ const works: Work[] = [
       color: var(--color-text-light);
     }
 
+    .category {
+      margin-bottom: 3rem;
+    }
+
+    .category-name {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      letter-spacing: 0.12em;
+      margin-bottom: 1.5rem;
+    }
+
     .work-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 4rem;
+      gap: 2.5rem;
     }
 
     .work-item a {
@@ -58,43 +46,50 @@ const works: Work[] = [
       aspect-ratio: 16 / 10;
       object-fit: cover;
       background: #eee;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
     .work-title {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 400;
       letter-spacing: 0.05em;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
     }
 
     .work-subtitle {
       font-size: 0.8rem;
       color: var(--color-text-light);
       letter-spacing: 0.05em;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
     .work-desc {
-      font-size: 0.9rem;
-      line-height: 1.8;
+      font-size: 0.85rem;
+      line-height: 1.7;
       color: #666;
     }
   </style>
 
   <div class="page">
     <h1>作品集</h1>
-    <ul class="work-list">
-      {
-        works.map((w) => (
-          <li class="work-item">
-            <img class="work-cover" src={w.cover} alt={w.title} />
-            <div class="work-title">{w.title}</div>
-            <div class="work-subtitle">{w.subtitle}</div>
-            <p class="work-desc">{w.description}</p>
-          </li>
-        ))
-      }
-    </ul>
+    {Object.entries(worksByCategory).map(([cat, items]) => (
+      items.length > 0 && (
+        <section class="category">
+          <h2 class="category-name">{cat}</h2>
+          <ul class="work-list">
+            {items.map((w) => (
+              <li class="work-item">
+                <a href={`/works/${w.slug}`}>
+                  <img class="work-cover" src={w.cover} alt={w.title} />
+                  <div class="work-title">{w.title}</div>
+                  <div class="work-subtitle">{w.subtitle}</div>
+                  {w.description && <p class="work-desc">{w.description.slice(0, 80)}{w.description.length > 80 ? "…" : ""}</p>}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    ))}
   </div>
 </BaseLayout>
