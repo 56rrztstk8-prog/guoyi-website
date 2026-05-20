@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+interface Work {
+  title: string;
+  subtitle: string;
+  cover: string;
+  description: string;
+}
+
+const works: Work[] = [
+  {
+    title: "何枝可依",
+    subtitle: "实验影像 / 诗纪录片",
+    cover: "/images/works/he-zhi-ke-yi-cover.jpg",
+    description:
+      "以个人频繁搬家的成长经历为起点，通过诗意的独白、真实的母女对话以及纸船、迷宫等视觉隐喻，探讨在高速流动的当下，个体对"家"的迷失与对安全感的追问。",
+  },
+  {
+    title: "Web and Wyrd",
+    subtitle: "影集",
+    cover: "/images/works/web-and-wyrd-cover.jpg",
+    description:
+      "通过三个核心神话故事——蜘蛛祖母编织世界、郊狼柯帝编织星辰、女武神编织命运——呈现人类如何用"编织"的意象理解世界。",
+  },
+];
+---
+
+<BaseLayout title="作品集">
+  <style>
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 8vh var(--spacing-page);
+    }
+
+    .page h1 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      margin-bottom: 3rem;
+      color: var(--color-text-light);
+    }
+
+    .work-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    .work-item a {
+      display: block;
+    }
+
+    .work-cover {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      background: #eee;
+      margin-bottom: 1rem;
+    }
+
+    .work-title {
+      font-size: 1.2rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .work-subtitle {
+      font-size: 0.8rem;
+      color: var(--color-text-light);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+
+    .work-desc {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #666;
+    }
+  </style>
+
+  <div class="page">
+    <h1>作品集</h1>
+    <ul class="work-list">
+      {
+        works.map((w) => (
+          <li class="work-item">
+            <img class="work-cover" src={w.cover} alt={w.title} />
+            <div class="work-title">{w.title}</div>
+            <div class="work-subtitle">{w.subtitle}</div>
+            <p class="work-desc">{w.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>
