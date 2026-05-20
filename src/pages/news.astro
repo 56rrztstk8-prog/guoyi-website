@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="新闻 & 展览">
+  <style>
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 8vh var(--spacing-page);
+    }
+
+    .page h1 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      margin-bottom: 3rem;
+      color: var(--color-text-light);
+    }
+
+    .empty {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.8;
+    }
+  </style>
+
+  <div class="page">
+    <h1>新闻 & 展览</h1>
+    <p class="empty">暂无展览信息。</p>
+  </div>
+</BaseLayout>
