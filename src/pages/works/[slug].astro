@@ -68,15 +68,51 @@ if (!work) {
       margin-bottom: 3rem;
     }
 
-    .work-images {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+    .work-video {
+      margin-bottom: 3rem;
     }
 
-    .work-images img {
+    .carousel {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .carousel-track {
+      width: 100%;
+    }
+
+    .carousel-img {
       width: 100%;
       object-fit: contain;
+      max-height: 80vh;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.7);
+      border: none;
+      font-size: 1.5rem;
+      color: #333;
+      cursor: pointer;
+      padding: 0.5rem 0.8rem;
+      z-index: 10;
+      transition: background 0.2s;
+      font-family: inherit;
+      line-height: 1;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .carousel-prev {
+      left: -3rem;
+    }
+
+    .carousel-next {
+      right: -3rem;
     }
   </style>
 
@@ -87,12 +123,47 @@ if (!work) {
       <p class="work-subtitle">{work.subtitle}</p>
     </div>
     {work.description && <div class="work-desc">{work.description}</div>}
+    {work.video && (
+      <div class="work-video">
+        <video controls style="width: 100%; max-height: 80vh;">
+          <source src={work.video} type="video/mp4" />
+        </video>
+      </div>
+    )}
     {work.images.length > 0 && (
-      <div class="work-images">
-        {work.images.map((img) => (
-          <img src={img} alt="" loading="lazy" />
-        ))}
+      <div class="carousel" id="carousel">
+        <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="上一张">〈</button>
+        <div class="carousel-track" id="carousel-track">
+          {work.images.map((img, i) => (
+            <img
+              class="carousel-img"
+              src={img}
+              alt=""
+              loading="lazy"
+              style={i === 0 ? "" : "display: none;"}
+            />
+          ))}
+        </div>
+        <button class="carousel-btn carousel-next" id="carousel-next" aria-label="下一张">〉</button>
       </div>
     )}
   </div>
+  <script>
+    const track = document.getElementById('carousel-track');
+    if (track) {
+      const imgs = track.querySelectorAll('.carousel-img');
+      const prev = document.getElementById('carousel-prev');
+      const next = document.getElementById('carousel-next');
+      let current = 0;
+
+      function show(i) {
+        imgs[current].style.display = 'none';
+        current = (i + imgs.length) % imgs.length;
+        imgs[current].style.display = 'block';
+      }
+
+      prev.addEventListener('click', () => show(current - 1));
+      next.addEventListener('click', () => show(current + 1));
+    }
+  </script>
 </BaseLayout>

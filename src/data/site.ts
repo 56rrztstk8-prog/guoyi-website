@@ -3,6 +3,7 @@ export const site = {
   nameZh: "郭熠",
 
   nav: [
+    { label: "首页", href: "/" },
     { label: "作品集", href: "/portfolio" },
     { label: "新闻 & 展览", href: "/news" },
     { label: "关于", href: "/about" },

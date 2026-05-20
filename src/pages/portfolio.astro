@@ -85,7 +85,7 @@ import { worksByCategory } from "../data/works";
                   <img class="work-cover" src={w.cover} alt={w.title} />
                   <div class="work-title">{w.title}</div>
                   <div class="work-subtitle">{w.subtitle}</div>
-                  {w.description && <p class="work-desc">{w.description.slice(0, 80)}{w.description.length > 80 ? "…" : ""}</p>}
+                  {w.shortDescription && <p class="work-desc">{w.shortDescription}</p>}
                 </a>
               </li>
             ))}
