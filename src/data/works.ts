@@ -15,9 +15,9 @@ export const worksByCategory = {
       title: "何枝可依",
       category: "影像",
       subtitle: "实验影像 / 诗纪录片",
-      cover: "/images/works/he-zhi-ke-yi-cover.jpg",
+      cover: "/images/works/he-zhi-ke-yi-cover.png",
       description: "以个人频繁搬家的成长经历为起点，通过诗意的独白、真实的母女对话以及纸船、迷宫等视觉隐喻，探讨在高速流动的当下，个体对「家」的迷失与对安全感的追问。",
-      images: [] as string[]
+      images: []
     },
     {
       slug: "chu-jue",
@@ -35,14 +35,14 @@ export const worksByCategory = {
       subtitle: "实验影像",
       cover: "/images/works/can-you-hear-me-cover.png",
       description: "以一枚萌生情感的摄像头为主角。在它眼里世界是八音盒的舞台：在小女孩旁边贴上一枚爱心，为冒烟汽车框起红色警报。它学着人类去爱，也学着人类不安。直到在一个空无一人的雨中乐园，它找不到任何目标，却依然感受到一股想要表达的冲动。这无人接收的喜爱，却成了它存在的唯一证明。当监控被赋予人性，它便从权力的眼睛转变为陪伴的眼睛，从「凝视」走向「关怀」。",
-      images: ["/images/works/can-you-hear-me-1.png"]
+      images: ["/images/works/can-you-hear-me-2.png"]
     },
     {
       slug: "xuan-er-wei-zhi",
       title: "悬而未至 悬而未治",
       category: "影像",
       subtitle: "实验影像",
-      cover: "/images/works/xuan-er-wei-zhi-cover.jpg",
+      cover: "/images/works/xuan-er-wei-zhi-cover.png",
       description: "故事发生在「守成纪」——一个未来已被关闭的时代。一切变革均已落地，人们不再仰望星空，转而将旧日幻想制成标本。在那里，对外星人的想象是文化遗产，对未来的渴望是一种需要治疗的精神失调。这部作品真正想触碰的，不是未来，而是现在。悬而未至的未来，悬而未治的渴望。",
       images: []
     }
@@ -55,7 +55,7 @@ export const worksByCategory = {
       subtitle: "摄影",
       cover: "/images/works/xin-sheng-ji-cover.png",
       description: "爱在眼眸流转，我听见生的喧嚣。",
-      images: []
+      images: ["/images/works/xin-sheng-ji-1.png"]
     },
     {
       slug: "web-and-wyrd",
@@ -64,7 +64,15 @@ export const worksByCategory = {
       subtitle: "影集",
       cover: "/images/works/web-and-wyrd-cover.jpg",
       description: "通过三个核心神话故事——蜘蛛祖母编织世界、郊狼柯帝编织星辰、女武神编织命运——呈现人类如何用「编织」的意象理解世界。",
-      images: []
+      images: [
+        "/images/works/web-and-wyrd-1.jpg",
+        "/images/works/web-and-wyrd-2.jpg",
+        "/images/works/web-and-wyrd-3.jpg",
+        "/images/works/web-and-wyrd-4.jpg",
+        "/images/works/web-and-wyrd-5.jpg",
+        "/images/works/web-and-wyrd-6.jpg",
+        "/images/works/web-and-wyrd-7.jpg"
+      ]
     },
     {
       slug: "fashion",
@@ -73,7 +81,17 @@ export const worksByCategory = {
       subtitle: "摄影",
       cover: "/images/works/fashion-cover.jpg",
       description: "",
-      images: []
+      images: [
+        "/images/works/fashion-1.jpg",
+        "/images/works/fashion-2.jpg",
+        "/images/works/fashion-3.jpg",
+        "/images/works/fashion-4.jpg",
+        "/images/works/fashion-5.jpg",
+        "/images/works/fashion-6.jpg",
+        "/images/works/fashion-7.jpg",
+        "/images/works/fashion-8.jpg",
+        "/images/works/fashion-9.png"
+      ]
     },
     {
       slug: "experimental-photo",
@@ -82,7 +100,13 @@ export const worksByCategory = {
       subtitle: "摄影",
       cover: "/images/works/experimental-photo-cover.png",
       description: "",
-      images: []
+      images: [
+        "/images/works/experimental-photo-1.png",
+        "/images/works/experimental-photo-2.png",
+        "/images/works/experimental-photo-3.png",
+        "/images/works/experimental-photo-4.png",
+        "/images/works/experimental-photo-5.png"
+      ]
     },
     {
       slug: "iron-silver",
@@ -91,7 +115,11 @@ export const worksByCategory = {
       subtitle: "摄影",
       cover: "/images/works/iron-silver-cover.png",
       description: "",
-      images: []
+      images: [
+        "/images/works/iron-silver-1.png",
+        "/images/works/iron-silver-2.png",
+        "/images/works/iron-silver-3.png"
+      ]
     }
   ],
   "绘画": [] as Work[]
