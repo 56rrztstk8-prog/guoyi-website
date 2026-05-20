@@ -12,8 +12,4 @@ export const site = {
   contact: {
     email: "GY070203@163.com",
   },
-
-  about: {
-    // 艺术家自述由 about.astro 直接引用考察/ 中的文件
-  },
 };

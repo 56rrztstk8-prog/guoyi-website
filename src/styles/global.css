@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+
 :root {
   --color-bg: #fafaf8;
   --color-text: #333333;
@@ -5,10 +7,9 @@
   --color-border: #e8e8e8;
   --color-menu-bg: rgba(250, 250, 248, 0.96);
 
-  --font-sans: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, serif;
+  --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, serif;
   --font-size-name: 0.75rem;
   --font-size-nav: 0.95rem;
-  --font-size-body: 1rem;
 
   --spacing-page: 5vw;
   --menu-width: 220px;
@@ -26,8 +27,9 @@
 }
 
 html {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: 17px;
+  line-height: 1.8;
   color: var(--color-text);
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
@@ -45,4 +47,9 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+:focus-visible {
+  outline: 1px solid var(--color-text-light);
+  outline-offset: 2px;
 }
