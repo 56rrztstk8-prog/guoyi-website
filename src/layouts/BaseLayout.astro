@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+import PageHead from "../components/PageHead.astro";
+import LeftMenu from "../components/LeftMenu.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  showMenu?: boolean;
+}
+
+const { title, description, showMenu = true } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <PageHead title={title} description={description} />
+  </head>
+  <body>
+    {showMenu && <LeftMenu />}
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
