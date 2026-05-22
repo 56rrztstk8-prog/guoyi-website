@@ -7,9 +7,10 @@ interface Props {
   title?: string;
   description?: string;
   showMenu?: boolean;
+  menuMode?: "hover" | "persistent";
 }
 
-const { title, description, showMenu = true } = Astro.props;
+const { title, description, showMenu = true, menuMode = "persistent" } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,9 +19,15 @@ const { title, description, showMenu = true } = Astro.props;
     <PageHead title={title} description={description} />
   </head>
   <body>
-    {showMenu && <LeftMenu />}
+    {showMenu && <LeftMenu mode={menuMode} />}
     <main>
       <slot />
     </main>
   </body>
 </html>
+
+<style>
+  body:has(.menu-persistent) main {
+    margin-left: var(--menu-width);
+  }
+</style>

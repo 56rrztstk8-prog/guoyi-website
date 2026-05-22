@@ -78,13 +78,22 @@ if (!work) {
     }
 
     .carousel-track {
+      position: relative;
       width: 100%;
+      min-height: 300px;
     }
 
     .carousel-img {
       width: 100%;
       object-fit: contain;
       max-height: 60vh;
+      transition: opacity 0.4s ease;
+    }
+
+    .carousel-img + .carousel-img {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
     .carousel-btn {
@@ -132,7 +141,7 @@ if (!work) {
     )}
     {work.images.length > 0 && (
       <div class="carousel" id="carousel">
-        <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="上一张">〈</button>
+        <button type="button" class="carousel-btn carousel-prev" id="carousel-prev" aria-label="上一张">〈</button>
         <div class="carousel-track" id="carousel-track">
           {work.images.map((img, i) => (
             <img
@@ -140,11 +149,11 @@ if (!work) {
               src={img}
               alt=""
               loading="lazy"
-              style={i === 0 ? "" : "display: none;"}
+              style={i === 0 ? "" : "opacity: 0;"}
             />
           ))}
         </div>
-        <button class="carousel-btn carousel-next" id="carousel-next" aria-label="下一张">〉</button>
+        <button type="button" class="carousel-btn carousel-next" id="carousel-next" aria-label="下一张">〉</button>
       </div>
     )}
   </div>
@@ -157,13 +166,13 @@ if (!work) {
       let current = 0;
 
       function show(i) {
-        imgs[current].style.display = 'none';
+        imgs[current].style.opacity = '0';
         current = (i + imgs.length) % imgs.length;
-        imgs[current].style.display = 'block';
+        imgs[current].style.opacity = '1';
       }
 
-      prev.addEventListener('click', () => show(current - 1));
-      next.addEventListener('click', () => show(current + 1));
+      prev.addEventListener('click', (e) => { e.preventDefault(); show(current - 1); });
+      next.addEventListener('click', (e) => { e.preventDefault(); show(current + 1); });
     }
   </script>
 </BaseLayout>

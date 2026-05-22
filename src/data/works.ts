@@ -64,7 +64,23 @@ export const worksByCategory = {
       cover: "/images/works/xin-sheng-ji-cover.png",
       description: "爱在眼眸流转，我听见生的喧嚣。",
       shortDescription: "爱在眼眸流转，我听见生的喧嚣。",
-      images: ["/images/works/xin-sheng-ji-1.png"]
+      images: [
+        "/images/works/xin-sheng-ji-1.png",
+        "/images/works/xin-sheng-ji-2.jpg",
+        "/images/works/xin-sheng-ji-3.jpg",
+        "/images/works/xin-sheng-ji-4.jpg",
+        "/images/works/xin-sheng-ji-5.jpg",
+        "/images/works/xin-sheng-ji-6.jpg",
+        "/images/works/xin-sheng-ji-7.jpg",
+        "/images/works/xin-sheng-ji-8.jpg",
+        "/images/works/xin-sheng-ji-9.jpg",
+        "/images/works/xin-sheng-ji-10.jpg",
+        "/images/works/xin-sheng-ji-11.jpg",
+        "/images/works/xin-sheng-ji-12.jpg",
+        "/images/works/xin-sheng-ji-13.jpg",
+        "/images/works/xin-sheng-ji-14.jpg",
+        "/images/works/xin-sheng-ji-15.jpg"
+      ]
     },
     {
       slug: "web-and-wyrd",
