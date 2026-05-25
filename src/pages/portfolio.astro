@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { worksByCategory } from "../data/works";
 ---
 
-<BaseLayout title="作品集">
+<BaseLayout title="Works">
   <style>
     .page {
       max-width: 640px;
@@ -73,7 +73,7 @@ import { worksByCategory } from "../data/works";
   </style>
 
   <div class="page">
-    <h1>作品集</h1>
+    <h1>Works</h1>
     {Object.entries(worksByCategory).map(([cat, items]) => (
       items.length > 0 && (
         <section class="category">

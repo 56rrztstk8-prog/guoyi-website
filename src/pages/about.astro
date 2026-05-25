@@ -1,12 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
 
-const statement = `郭熠，2007年生于河南，现生活工作于上海，创作涉及绘画、图片与视频。她的工作方法接近于线索编织——在创作过程中不断纳入来自不同源头的信息与材料，围绕一条主线编入作品。被编入的材料携带着各自的时间属性进入画面，它们共存，但不彼此消融。
+const statement = `Guo Yi, born 2007 in Henan, currently lives and works in Shanghai. Her practice spans painting, photography, and video. She describes her working method as thread-weaving—incorporating fragments of information from personal experience, mythological texts, and everyday imagery into the structure of a work around a gradually emerging central thread. In painting, this method manifests as pre-planned composition and layer-by-layer filling; in video, as handheld footage and the jump-cut assembly of found materials. She bypasses the uniform treatment of source materials, instead preserving the temporal properties and traces of use each carries as it is woven in, allowing the tension between collage, scraping, flat painting, and silhouette on the picture plane to become a material consequence of method rather than a stylistic decision. Viewing the mythological traditions scattered across the globe as points of light on the earth's surface—creation narratives, totemic beliefs, and unsolved mysteries are drawn into connecting lines by threads, interweaving into a terrestrial net composed of points, lines, and planes, which simultaneously accommodates dark spaces, broken threads, and fading nodes. Her concern does not rest on the structure of the net itself, but extends to the process of deterioration in connections over time—how myths degrade from observational records into stories, how symbols lose their referents through weathering, how threads break on their own when left unused. The sense of composition she understands is not formal law, but the projection of this net onto the picture plane: each incorporation of material is a remapping of some connection in the net, a reaffirmation of a node not yet faded.`;
 
-织网不只是一种方法。网由纤细的线构成，柔软，但并非脆弱：它承受张力、容许断裂、能够在破损处重新打结。网上的连接不是必然的，也不是永久的——神话会风化，文明会消退，一个曾经被认真对待的符号终将失去它的所指，但网的形态仍在，以另一种方式重新分配张力。将散布于全球各地的神话传统视为地表上的光点：每一个创世叙事、每一个图腾信仰、每一个未解之谜，都是一个亮点。总有线索将它们拉成线，交织为星座般的大地之网——但网中也有暗处，有断线，有正在黯淡的节点。连接并不意味着亲密，在场不意味着归属。`;
+const mailtoHref = `mailto:${site.contact.email}`;
 ---
 
-<BaseLayout title="关于">
+<BaseLayout title="About">
   <style>
     .page {
       max-width: 560px;
@@ -28,10 +29,32 @@ const statement = `郭熠，2007年生于河南，现生活工作于上海，创
       color: var(--color-text);
       white-space: pre-line;
     }
+
+    .contact-info {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.85rem;
+      line-height: 2.1;
+      color: var(--color-text);
+    }
+
+    .contact-info a {
+      border-bottom: 1px solid var(--color-border);
+      transition: border-color 0.2s;
+    }
+
+    .contact-info a:hover {
+      border-color: var(--color-text-light);
+    }
   </style>
 
   <div class="page">
-    <h1>关于</h1>
+    <h1>About</h1>
     <div class="statement">{statement}</div>
+    <div class="contact-info">
+      <p><a href={mailtoHref}>{site.contact.email}</a></p>
+      <p>{site.contact.address}</p>
+    </div>
   </div>
 </BaseLayout>

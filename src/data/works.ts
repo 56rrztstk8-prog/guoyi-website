@@ -1,7 +1,7 @@
 export interface Work {
   slug: string;
   title: string;
-  category: string; // "影像" | "摄影" | "绘画"
+  category: string; // "Video" | "Photography" | "Painting"
   subtitle: string;
   cover: string;
   description: string;
@@ -11,59 +11,60 @@ export interface Work {
 }
 
 export const worksByCategory = {
-  "影像": [
+  "Video": [
     {
       slug: "he-zhi-ke-yi",
-      title: "何枝可依",
-      category: "影像",
-      subtitle: "实验影像 / 诗纪录片",
+      title: "No Branch to Perch",
+      category: "Video",
+      subtitle: "Experimental Film / Poetic Documentary",
       cover: "/images/works/he-zhi-ke-yi-cover.png",
-      description: "以个人频繁搬家的成长经历为起点，通过诗意的独白、真实的母女对话以及纸船、迷宫等视觉隐喻，探讨在高速流动的当下，个体对「家」的迷失与对安全感的追问。",
-      shortDescription: "以个人频繁搬家的成长经历为起点，探讨个体对「家」的迷失与对安全感的追问。",
-      images: []
+      description: "Taking the artist's own experience of frequent relocation as a point of departure, this work explores the loss of \"home\" and the search for security in an era of rapid mobility. Through poetic monologue, real mother-daughter conversations, and visual metaphors of paper boats and labyrinths, personal memory becomes a shared inquiry into displacement.",
+      shortDescription: "An experimental film exploring the loss of home and the search for security in an era of dislocation.",
+      images: [],
+      video: "/videos/he-zhi-ke-yi.mp4",
     },
     {
       slug: "chu-jue",
-      title: "触觉",
-      category: "影像",
-      subtitle: "实验影像",
+      title: "Touch",
+      category: "Video",
+      subtitle: "Experimental Film",
       cover: "/images/works/chu-jue-cover.png",
-      description: "这是一次关于「触碰」的五感练习。从棉花的蓬松到玻璃的冷静，从树干的纹路到脉搏的跳动——我相信，触碰是先于视觉、先于语言的第一种语言，它不会说谎。\n\n在这段影像里，我试图捕捉那些容易被忽略的瞬间：水从指缝流走时的依恋与流失，皮肤泡水后如山脉般的褶皱，荷叶上滚向画面一角的水滴，以及风鼓动衣服时那种轻柔又强硬的包裹感。视频不完全重复文字，而是让影像成为另一种诉说——主观的、片段的、有时甚至矛盾的。",
-      shortDescription: "一次关于「触碰」的五感练习——触碰是先于视觉、先于语言的第一种语言。",
+      description: "A sensory exercise on the theme of touch. From the fluffiness of cotton to the coldness of glass, from the texture of tree bark to the rhythm of a pulse—touch, I believe, is the first language, predating both vision and speech. It does not lie.\n\nIn this video, I try to capture those easily overlooked moments: the attachment and loss as water slips through fingers, skin wrinkled like mountain ranges after soaking, a water droplet rolling toward the corner of a lotus leaf, the soft yet insistent embrace of wind swelling fabric. The images do not merely repeat the words—they become another form of telling: subjective, fragmentary, at times contradictory.",
+      shortDescription: "A sensory exercise on touch—the first language, predating vision and speech.",
       images: ["/images/works/chu-jue-1.png", "/images/works/chu-jue-2.png"],
-      video: "",
+      video: "/videos/chu-jue.mp4",
     },
     {
       slug: "can-you-hear-me",
-      title: "你能看见我了吗",
-      category: "影像",
-      subtitle: "实验影像",
+      title: "Can You Hear Me",
+      category: "Video",
+      subtitle: "Experimental Film",
       cover: "/images/works/can-you-hear-me-cover.png",
-      description: "以一枚萌生情感的摄像头为主角。在它眼里世界是八音盒的舞台：在小女孩旁边贴上一枚爱心，为冒烟汽车框起红色警报。它学着人类去爱，也学着人类不安。直到在一个空无一人的雨中乐园，它找不到任何目标，却依然感受到一股想要表达的冲动。这无人接收的喜爱，却成了它存在的唯一证明。当监控被赋予人性，它便从权力的眼睛转变为陪伴的眼睛，从「凝视」走向「关怀」。",
-      shortDescription: "一枚萌生情感的摄像头，学着人类去爱，也学着人类不安。",
+      description: "A surveillance camera awakens to emotion. In its eyes, the world is a music box stage: it pastes a heart beside a little girl, frames a smoking car with a red alert. It learns to love like humans do, and learns human unease. Until one day, in an empty rain-swept playground, it finds no target—yet still feels an impulse to express. This unclaimed affection becomes the sole proof of its existence. When surveillance is granted humanity, it transforms from an eye of power into an eye of companionship—from \"gazing\" toward \"caring.\"",
+      shortDescription: "A surveillance camera learns to love and to feel unease—an eye of power becomes an eye of care.",
       images: ["/images/works/can-you-hear-me-2.png"],
-      video: "",
+      video: "/videos/can-you-hear-me.mp4",
     },
     {
       slug: "xuan-er-wei-zhi",
-      title: "悬而未至 悬而未治",
-      category: "影像",
-      subtitle: "实验影像",
+      title: "Suspended",
+      category: "Video",
+      subtitle: "Experimental Film",
       cover: "/images/works/xuan-er-wei-zhi-cover.png",
-      description: "故事发生在「守成纪」——一个未来已被关闭的时代。一切变革均已落地，人们不再仰望星空，转而将旧日幻想制成标本。在那里，对外星人的想象是文化遗产，对未来的渴望是一种需要治疗的精神失调。这部作品真正想触碰的，不是未来，而是现在。悬而未至的未来，悬而未治的渴望。",
-      shortDescription: "故事发生在「守成纪」——一个未来已被关闭的时代。悬而未至的未来，悬而未治的渴望。",
-      images: []
+      description: "The story unfolds in \"Shoucheng Era\"—a time when the future has been closed. All transformations have already landed. People no longer look up at the stars; instead, they preserve old fantasies as specimens. Here, the imagination of extraterrestrials is cultural heritage; longing for the future is a mental disorder requiring treatment. What this work truly seeks to touch is not the future, but the present. A future suspended, a longing untreated.",
+      shortDescription: "In a world where the future has been closed, longing itself becomes a condition to cure.",
+      images: [],
     }
   ],
-  "摄影": [
+  "Photography": [
     {
       slug: "xin-sheng-ji",
-      title: "新生纪",
-      category: "摄影",
-      subtitle: "摄影",
+      title: "New Genesis",
+      category: "Photography",
+      subtitle: "Photography",
       cover: "/images/works/xin-sheng-ji-cover.png",
-      description: "爱在眼眸流转，我听见生的喧嚣。",
-      shortDescription: "爱在眼眸流转，我听见生的喧嚣。",
+      description: "Love turns in the eyes; I hear the clamor of life.",
+      shortDescription: "Love turns in the eyes; I hear the clamor of life.",
       images: [
         "/images/works/xin-sheng-ji-1.png",
         "/images/works/xin-sheng-ji-2.jpg",
@@ -79,17 +80,17 @@ export const worksByCategory = {
         "/images/works/xin-sheng-ji-12.jpg",
         "/images/works/xin-sheng-ji-13.jpg",
         "/images/works/xin-sheng-ji-14.jpg",
-        "/images/works/xin-sheng-ji-15.jpg"
+        "/images/works/xin-sheng-ji-15.jpg",
       ]
     },
     {
       slug: "web-and-wyrd",
       title: "Web and Wyrd",
-      category: "摄影",
-      subtitle: "影集",
+      category: "Photography",
+      subtitle: "Photographic Series",
       cover: "/images/works/web-and-wyrd-cover.jpg",
-      description: "通过三个核心神话故事——蜘蛛祖母编织世界、郊狼柯帝编织星辰、女武神编织命运——呈现人类如何用「编织」的意象理解世界。",
-      shortDescription: "通过三个神话故事，呈现人类如何用「编织」的意象理解世界。",
+      description: "Through three core mythological stories—Spider Grandmother weaving the world, Coyote weaving the stars, and the Valkyries weaving fate—this series presents how humanity has understood the world through the metaphor of weaving.",
+      shortDescription: "How humanity has understood the world through the metaphor of weaving, told across three myths.",
       images: [
         "/images/works/web-and-wyrd-1.jpg",
         "/images/works/web-and-wyrd-2.jpg",
@@ -97,14 +98,14 @@ export const worksByCategory = {
         "/images/works/web-and-wyrd-4.jpg",
         "/images/works/web-and-wyrd-5.jpg",
         "/images/works/web-and-wyrd-6.jpg",
-        "/images/works/web-and-wyrd-7.jpg"
+        "/images/works/web-and-wyrd-7.jpg",
       ]
     },
     {
       slug: "fashion",
-      title: "时尚摄影",
-      category: "摄影",
-      subtitle: "摄影",
+      title: "Fashion Photography",
+      category: "Photography",
+      subtitle: "Photography",
       cover: "/images/works/fashion-cover.jpg",
       description: "",
       shortDescription: "",
@@ -117,14 +118,14 @@ export const worksByCategory = {
         "/images/works/fashion-6.jpg",
         "/images/works/fashion-7.jpg",
         "/images/works/fashion-8.jpg",
-        "/images/works/fashion-9.png"
+        "/images/works/fashion-9.png",
       ]
     },
     {
       slug: "experimental-photo",
-      title: "实验摄影",
-      category: "摄影",
-      subtitle: "摄影",
+      title: "Experimental Photography",
+      category: "Photography",
+      subtitle: "Photography",
       cover: "/images/works/experimental-photo-cover.png",
       description: "",
       shortDescription: "",
@@ -133,25 +134,39 @@ export const worksByCategory = {
         "/images/works/experimental-photo-2.png",
         "/images/works/experimental-photo-3.png",
         "/images/works/experimental-photo-4.png",
-        "/images/works/experimental-photo-5.png"
+        "/images/works/experimental-photo-5.png",
       ]
     },
     {
       slug: "iron-silver",
-      title: "铁银试剂",
-      category: "摄影",
-      subtitle: "摄影",
+      title: "Iron-Silver Process",
+      category: "Photography",
+      subtitle: "Photography",
       cover: "/images/works/iron-silver-cover.png",
       description: "",
       shortDescription: "",
       images: [
         "/images/works/iron-silver-1.png",
         "/images/works/iron-silver-2.png",
-        "/images/works/iron-silver-3.png"
+        "/images/works/iron-silver-3.png",
       ]
     }
   ],
-  "绘画": [] as Work[]
+  "Painting": [
+    {
+      slug: "painting",
+      title: "Painting",
+      category: "Painting",
+      subtitle: "Painting",
+      cover: "/images/works/painting-1.jpg",
+      description: "",
+      shortDescription: "",
+      images: [
+        "/images/works/painting-1.jpg",
+        "/images/works/painting-2.jpg",
+      ]
+    }
+  ] as Work[]
 };
 
 // Flatten for lookup

@@ -3,11 +3,10 @@ export const site = {
   nameZh: "郭熠",
 
   nav: [
-    { label: "首页", href: "/" },
-    { label: "作品集", href: "/portfolio" },
-    { label: "新闻 & 展览", href: "/news" },
-    { label: "关于", href: "/about" },
-    { label: "联系方式", href: "/contact" },
+    { label: "Home", href: "/" },
+    { label: "Works", href: "/portfolio" },
+    { label: "News & Exhibitions", href: "/news" },
+    { label: "About", href: "/about" },
   ],
 
   contact: {

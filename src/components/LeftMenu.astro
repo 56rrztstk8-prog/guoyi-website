@@ -151,10 +151,10 @@ const { mode = "persistent" } = Astro.props;
 <div class="menu-trigger" aria-hidden="true"></div>
 
 <!-- Hamburger toggle label — visible on hover or when menu is open -->
-<label for="menu-toggle" class="menu-toggle-label" aria-label="打开菜单">☰</label>
+<label for="menu-toggle" class="menu-toggle-label" aria-label="Open menu">☰</label>
 
-<nav class="menu-panel" aria-label="主导航">
-  <span class="menu-label">目录</span>
+<nav class="menu-panel" aria-label="Main navigation">
+  <span class="menu-label">Menu</span>
   <ul class="menu-nav">
     {site.nav.map((item) => (
       <li><a href={item.href}>{item.label}</a></li>

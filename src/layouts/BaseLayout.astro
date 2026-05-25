@@ -14,7 +14,7 @@ const { title, description, showMenu = true, menuMode = "persistent" } = Astro.p
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
     <PageHead title={title} description={description} />
   </head>
@@ -23,11 +23,24 @@ const { title, description, showMenu = true, menuMode = "persistent" } = Astro.p
     <main>
       <slot />
     </main>
+    <footer>
+      <span>&copy; Guo Yi</span>
+    </footer>
   </body>
 </html>
 
 <style>
   body:has(.menu-persistent) main {
     margin-left: var(--menu-width);
+  }
+
+  footer {
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.5rem;
+    font-size: 0.7rem;
+    color: var(--color-text-light);
+    letter-spacing: 0.05em;
+    z-index: 50;
   }
 </style>
