@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { worksByCategory } from "../data/works";
+
+const basePath = (p: string) => import.meta.env.BASE_URL + p.replace(/^\//, "");
 ---
 
 <BaseLayout title="Works">
@@ -81,8 +83,8 @@ import { worksByCategory } from "../data/works";
           <ul class="work-list">
             {items.map((w) => (
               <li class="work-item">
-                <a href={`/works/${w.slug}`}>
-                  <img class="work-cover" src={w.cover} alt={w.title} />
+                <a href={import.meta.env.BASE_URL + "works/" + w.slug}>
+                  <img class="work-cover" src={basePath(w.cover)} alt={w.title} />
                   <div class="work-title">{w.title}</div>
                   <div class="work-subtitle">{w.subtitle}</div>
                   {w.shortDescription && <p class="work-desc">{w.shortDescription}</p>}

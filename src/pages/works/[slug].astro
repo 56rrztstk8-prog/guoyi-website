@@ -2,6 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { works } from "../../data/works";
 
+const basePath = (p: string) => import.meta.env.BASE_URL + p.replace(/^\//, "");
+
 export function getStaticPaths() {
   return works.map((w) => ({ params: { slug: w.slug } }));
 }
@@ -10,7 +12,7 @@ const { slug } = Astro.params;
 const work = works.find((w) => w.slug === slug);
 
 if (!work) {
-  return Astro.redirect("/portfolio");
+  return Astro.redirect(import.meta.env.BASE_URL + "portfolio");
 }
 ---
 
@@ -126,7 +128,7 @@ if (!work) {
   </style>
 
   <div class="page">
-    <a class="back-link" href="/portfolio">← 作品集</a>
+    <a class="back-link" href={import.meta.env.BASE_URL + "portfolio"}>← Works</a>
     <div class="work-header">
       <h1 class="work-title">{work.title}</h1>
       <p class="work-subtitle">{work.subtitle}</p>
@@ -135,7 +137,7 @@ if (!work) {
     {work.video && (
       <div class="work-video">
         <video controls controlsList="nodownload" disablePictureInPicture oncontextmenu="return false;" style="width: 100%; max-height: 80vh;">
-          <source src={work.video} type="video/mp4" />
+          <source src={basePath(work.video)} type="video/mp4" />
         </video>
       </div>
     )}
@@ -146,7 +148,7 @@ if (!work) {
           {work.images.map((img, i) => (
             <img
               class="carousel-img"
-              src={img}
+              src={basePath(img)}
               alt=""
               loading="lazy"
               style={i === 0 ? "" : "opacity: 0;"}

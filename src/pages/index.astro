@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { site } from "../data/site";
 
 // Homepage hero image path
-const heroImage = "/images/hero.jpg";
+const heroImage = import.meta.env.BASE_URL + "images/hero.jpg";
 ---
 
 <BaseLayout title={undefined} description="Guo Yi — Artist Website" menuMode="hover">

@@ -12,4 +12,4 @@ const fullTitle = title ? `${title} — GUO YI` : "GUO YI";
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{fullTitle}</title>
 <meta name="description" content={description || "Guo Yi Artist Website"} />
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/x-icon" href={import.meta.env.BASE_URL + "favicon.ico"} />
