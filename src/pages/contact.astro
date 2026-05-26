@@ -9,15 +9,19 @@ const mailtoHref = `mailto:${site.contact.email}`;
   <style>
     .page {
       max-width: 560px;
-      margin: 0 auto;
-      padding: 8vh var(--spacing-page);
+      margin: 0;
+      padding: 0 var(--spacing-page) 6vh var(--spacing-page);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
 
     .page h1 {
       font-size: 1rem;
       font-weight: 400;
       letter-spacing: 0.08em;
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
       color: var(--color-text-light);
     }
 

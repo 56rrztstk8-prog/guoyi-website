@@ -136,6 +136,15 @@ const { mode = "persistent" } = Astro.props;
     color: var(--color-text-light);
   }
 
+  .menu-copyright {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    font-size: 0.6rem;
+    color: var(--color-text-light);
+    letter-spacing: 0.05em;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .menu-panel {
       transition: none;
@@ -160,5 +169,6 @@ const { mode = "persistent" } = Astro.props;
       <li><a href={item.href}>{item.label}</a></li>
     ))}
   </ul>
+    <span class="menu-copyright">&copy; Guo Yi</span>
 </nav>
 </div>

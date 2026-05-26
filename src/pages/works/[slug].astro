@@ -134,7 +134,7 @@ if (!work) {
     {work.description && <div class="work-desc">{work.description}</div>}
     {work.video && (
       <div class="work-video">
-        <video controls style="width: 100%; max-height: 80vh;">
+        <video controls controlsList="nodownload" disablePictureInPicture oncontextmenu="return false;" style="width: 100%; max-height: 80vh;">
           <source src={work.video} type="video/mp4" />
         </video>
       </div>
