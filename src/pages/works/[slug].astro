@@ -141,7 +141,7 @@ if (!work) {
         </video>
       </div>
     )}
-    {work.images.length > 0 && (
+    {work.images.length > 0 && !work.video && (
       <div class="carousel" id="carousel">
         <button type="button" class="carousel-btn carousel-prev" id="carousel-prev" aria-label="上一张">〈</button>
         <div class="carousel-track" id="carousel-track">

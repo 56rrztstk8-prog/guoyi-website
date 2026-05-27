@@ -151,6 +151,13 @@ const base = import.meta.env.BASE_URL;
       transition: none;
     }
   }
+
+  /* Always show hamburger on touch devices and small screens */
+  @media (hover: none), (max-width: 768px) {
+    .menu-toggle-label {
+      opacity: 1;
+    }
+  }
 </style>
 
 <div class={mode === "hover" ? "menu-hover" : "menu-persistent"}>

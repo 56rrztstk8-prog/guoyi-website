@@ -31,7 +31,7 @@ export const worksByCategory = {
       cover: "/images/works/chu-jue-cover.webp",
       description: "A sensory exercise on the theme of touch. From the fluffiness of cotton to the coldness of glass, from the texture of tree bark to the rhythm of a pulse—touch, I believe, is the first language, predating both vision and speech. It does not lie.\n\nIn this video, I try to capture those easily overlooked moments: the attachment and loss as water slips through fingers, skin wrinkled like mountain ranges after soaking, a water droplet rolling toward the corner of a lotus leaf, the soft yet insistent embrace of wind swelling fabric. The images do not merely repeat the words—they become another form of telling: subjective, fragmentary, at times contradictory.",
       shortDescription: "A sensory exercise on touch—the first language, predating vision and speech.",
-      images: ["/images/works/chu-jue-1.webp", "/images/works/chu-jue-2.webp"],
+      images: [],
       video: "/videos/chu-jue.mp4",
     },
     {
@@ -42,7 +42,7 @@ export const worksByCategory = {
       cover: "/images/works/can-you-hear-me-cover.webp",
       description: "A surveillance camera awakens to emotion. In its eyes, the world is a music box stage: it pastes a heart beside a little girl, frames a smoking car with a red alert. It learns to love like humans do, and learns human unease. Until one day, in an empty rain-swept playground, it finds no target—yet still feels an impulse to express. This unclaimed affection becomes the sole proof of its existence. When surveillance is granted humanity, it transforms from an eye of power into an eye of companionship—from \"gazing\" toward \"caring.\"",
       shortDescription: "A surveillance camera learns to love and to feel unease—an eye of power becomes an eye of care.",
-      images: ["/images/works/can-you-hear-me-2.webp"],
+      images: [],
       video: "/videos/can-you-hear-me.mp4",
     },
     {
